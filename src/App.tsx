@@ -210,7 +210,7 @@ function App() {
   if (path === '/services') return <ServicesPage />
   if (path === '/faq') return <FaqPage />
   if (path === '/contact') return <ContactPage />
-  if (path === '/privacy' || path === '/terms' || path === '/disclaimer' || path === '/advertising-disclosure') return <LegalPage type={path.slice(1) as LegalType} />
+  if (path === '/privacy' || path === '/terms' || path === '/disclaimer' || path === '/advertising-disclosure' || path === '/refund-policy') return <LegalPage type={path.slice(1) as LegalType} />
   return <NotFound />
 }
 export default App
