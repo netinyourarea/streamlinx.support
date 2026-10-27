@@ -1,0 +1,44 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "title": "Independent Internet & Cable Service Assistance"
+    },
+    {
+      "path": "/about",
+      "title": "About Us"
+    },
+    {
+      "path": "/services",
+      "title": "Internet, Broadband, Wi-Fi & Cable Guidance"
+    },
+    {
+      "path": "/faq",
+      "title": "Frequently Asked Questions"
+    },
+    {
+      "path": "/contact",
+      "title": "Contact StreamLinx"
+    },
+    {
+      "path": "/privacy",
+      "title": "Privacy Policy — StreamLinx"
+    },
+    {
+      "path": "/terms",
+      "title": "Terms and Conditions — StreamLinx"
+    },
+    {
+      "path": "/disclaimer",
+      "title": "Disclaimer — StreamLinx"
+    },
+    {
+      "path": "/advertising-disclosure",
+      "title": "Advertisement Disclosure — StreamLinx"
+    },
+    {
+      "path": "/refund-policy",
+      "title": "Refund Policy — StreamLinx"
+    }
+  ]
+}
