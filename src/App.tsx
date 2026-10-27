@@ -75,7 +75,7 @@ function Link({ href, children, className = '', onClick }: { href: string; child
 }
 function WaveLine({ compact = false }: { compact?: boolean }) { return <svg className={`wave-line ${compact ? 'wave-line-compact' : ''}`} viewBox="0 0 280 80" fill="none" aria-hidden="true"><path d="M1 51C34 51 37 17 68 17s27 45 61 45 31-46 65-46 35 31 85 31" stroke="currentColor" strokeWidth="1.4" /><path d="M1 62C34 62 37 28 68 28s27 45 61 45 31-46 65-46 35 31 85 31" stroke="currentColor" strokeOpacity=".34" /></svg> }
 function Eyebrow({ children }: { children: ReactNode }) { return <p className="eyebrow">{children}</p> }
-function Image({ src, alt, className = '', loading = 'lazy' }: { src: string; alt: string; className?: string; loading?: 'lazy' | 'eager' }) { return <img src={src} alt={alt} className={className} loading={loading} /> }
+function Image({ src, alt, className = '', loading = 'lazy' }: { src: string; alt: string; className?: string; loading?: 'lazy' | 'eager' }) { return <img src={src} alt={alt} className={className} loading={loading} decoding="async" {...(loading === 'eager' ? { fetchPriority: 'high' as const } : {})} /> }
 // Every call-to-action is a tap-to-call link that shows the phone number in its text.
 function CallButton({ variant = 'primary', where = 'cta' }: { variant?: 'primary' | 'text' | 'light'; where?: string }) {
   return <a href={PHONE_HREF} className={`button button-${variant}`} aria-label={`Call ${PHONE}`} onClick={() => trackEvent('phone_click', { location: where })}><span className="btn-num">{PHONE}</span><Arrow /></a>
@@ -96,7 +96,7 @@ function PageFrame({ children }: { children: ReactNode }) { return <><Header /><
 function PartnerStrip() {
   if (!partnerLogos.length) return null
   // The list is rendered twice so the CSS loop never shows a gap.
-  const row = (hidden: boolean) => <ul className="logo-track" aria-hidden={hidden || undefined}>{partnerLogos.map(logo => <li key={logo.src}><img src={logo.src} alt={hidden ? '' : logo.name} loading="lazy" /></li>)}</ul>
+  const row = (hidden: boolean) => <ul className="logo-track" aria-hidden={hidden || undefined}>{partnerLogos.map(logo => <li key={logo.src}><img src={logo.src} alt={hidden ? '' : logo.name} loading="lazy" decoding="async" /></li>)}</ul>
   return <section className="logo-loop section-pad" aria-label="Logo showcase"><Eyebrow>Popular providers</Eyebrow><div className="logo-loop-window">{row(false)}{row(true)}</div></section>
 }
 
