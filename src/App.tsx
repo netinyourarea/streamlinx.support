@@ -18,8 +18,8 @@ type LegalType = 'privacy' | 'terms' | 'disclaimer' | 'advertising-disclosure' |
 
 const SITE_URL = 'https://streamlinx.support'
 const BRAND = 'StreamLinx'
-const PHONE = '(833) 581-5253'
-const PHONE_HREF = 'tel:+18335815253'
+const PHONE = '(833) 581-4309'
+const PHONE_HREF = 'tel:+18335814309'
 const ADDRESS_LINES = ['29 Plaza Way Apt 4118', 'Plymouth MA 02360']
 
 const businessDescription = `${BRAND} is an independent third-party service assistance provider. We are not affiliated with, authorized by, or endorsed by any internet, cable, or telecom service provider.`
